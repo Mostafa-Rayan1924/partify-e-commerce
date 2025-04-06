@@ -5,19 +5,19 @@ export const contactForm: ContactItem[] = [
   {
     id: 1,
     icon: MapPin,
-    title: "العنوان",
-    desc: "مصر, الاسماعيلية, بجوار صيدلية امنية شعبان.",
+    title: "Address",
+    desc: "Egypt, Ismailia, next to Amnia Shaaban Pharmacy.",
   },
   {
     id: 2,
     icon: Phone,
-    title: "للاتصال",
+    title: "Contact",
     desc: "+0201156581025 +0201277841419",
   },
   {
     id: 3,
     icon: Clock,
-    title: "مواعيد العمل",
-    desc: "من 9ص الي 11م",
+    title: "Working Hours",
+    desc: "From 9 AM to 11 PM",
   },
 ];

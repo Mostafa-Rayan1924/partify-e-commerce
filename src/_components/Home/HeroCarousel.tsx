@@ -11,7 +11,7 @@ import { EffectCards } from "swiper/modules";
 import Image from "next/image";
 const HeroCarousel = ({ data }: { data: any }) => {
   return (
-    <div className="col-span-2 relative overflow-hidden    grid place-items-center lg:mt-[70px]">
+    <div className="col-span-2 relative overflow-hidden    grid place-items-center lg:mt-[40px]">
       <Swiper
         effect={"cards"}
         grabCursor={true}
@@ -28,7 +28,7 @@ const HeroCarousel = ({ data }: { data: any }) => {
               alt={item?.name}
               width={500}
               height={500}
-              className="rounded-lg  h-full object-cover  "
+              className="rounded-lg  h-full object-fill  "
             />
           </SwiperSlide>
         ))}

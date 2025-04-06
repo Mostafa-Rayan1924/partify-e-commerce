@@ -1,4 +1,5 @@
 import About from "@/_components/Home/About";
+import Ads from "@/_components/Home/Ads";
 import Faq from "@/_components/Home/Faq";
 import Hero from "@/_components/Home/Hero";
 import LatestPro from "@/_components/Home/LatestPro";
@@ -16,9 +17,11 @@ export default function Home() {
       <Hero />
       <div className="space-y-14 mb-10 lg:space-y-20">
         <About show={true} />
-        <Suppliers />
-        <ServicrsHome />
         <LatestPro />
+        <ServicrsHome />
+        <Ads />
+        <Suppliers />
+        <ContactForm />
       </div>
     </main>
   );

@@ -69,33 +69,33 @@ const ContactForm = () => {
               className="hidden md:block rounded-r-lg object-fill h-full"
             />
           </div>
-          <form onSubmit={handleSubmit} className="flex-1 md:w-[70%]  p-10">
+          <form onSubmit={handleSubmit} className="flex-1 md:w-[70%] p-10">
             <h2 className="text-2xl mb-4 md:text-3xl lg:text-4xl font-semibold">
-              تواصل معانا
+              Contact Us
             </h2>
             <div className="space-y-4">
               <div className="flex flex-col gap-1">
-                <label>الاسم بالكامل</label>
+                <label>Full Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder={"اسمك"}
-                  className="border border-border p-2 w-full bg-accent outline-none  rounded"
+                  placeholder="Your name"
+                  className="border border-border p-2 w-full bg-accent outline-none rounded"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label>رقم الهاتف</label>
+                <label>Phone Number</label>
                 <input
                   type="text"
                   value={formData.phone}
                   name="phone"
                   onChange={handleChange}
-                  placeholder={"رقم الهاتف"}
+                  placeholder="Phone number"
                   required
-                  className="border border-border p-2 w-full bg-accent outline-none  rounded"
+                  className="border border-border p-2 w-full bg-accent outline-none rounded"
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -104,8 +104,8 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder={"نص الرسالة"}
-                  className="border border-border h-[150px] resize-none p-2 w-full bg-accent outline-none  rounded"
+                  placeholder="Message text"
+                  className="border border-border h-[150px] resize-none p-2 w-full bg-accent outline-none rounded"
                 />
               </div>
             </div>
@@ -115,10 +115,10 @@ const ContactForm = () => {
                 (buttonVariants({ size: "lg" }), "w-full mt-6 text-xl")
               }>
               {status === "submitting"
-                ? "loading..."
+                ? "Loading..."
                 : status === "success"
-                ? "sent successfully"
-                : "ارسال"}
+                ? "Sent Successfully"
+                : "Send"}
             </Button>
           </form>
         </div>

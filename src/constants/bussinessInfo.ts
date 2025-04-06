@@ -5,22 +5,17 @@ export let bussinessInfo: busInfo[] = [
   {
     id: 1,
     icon: MapPinHouse,
-    title: "مصر, الاسماعيلية, بجوار صيدلية امنية شعبان.",
+    title: "Egypt, Ismailia, next to Omnia Shaaban Pharmacy.",
   },
   {
     id: 2,
     icon: Clock10,
-    title: "مواعيد العمل : من 9ص الي 11م",
+    title: "Working hours: from 9 AM to 4 PM",
   },
   {
     id: 3,
     icon: Phone,
-    title: "01156581025 20+",
-    title2: "01212999388 20+",
-  },
-  {
-    id: 3,
-    icon: Mails,
-    title: "mr3309296@gmail.com",
+    title: "+20 1156581025",
+    title2: "+20 1156581025",
   },
 ];
