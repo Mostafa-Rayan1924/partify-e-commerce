@@ -2,9 +2,11 @@ import FilterProjects from "@/_components/Projects/FilterProjects";
 import ImportantSec from "@/_components/Projects/importanPro/ImportantSec";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "شركة إم جي | المشاريع",
-  description: "شركة ام جي للمقاولات العامة واعمال البحر",
+  title: "Shop | Partify",
+  description:
+    "Explore our extensive selection of genuine auto parts, high-performance batteries, premium engine oils, and car care accessories. Shop now to ensure your vehicle's optimal performance and longevity.",
 };
+
 const page = async ({
   searchParams,
 }: {

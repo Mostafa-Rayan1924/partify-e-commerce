@@ -8,9 +8,11 @@ import Suppliers from "@/_components/Home/Suppliers";
 import ContactForm from "@/_components/sharable/ContactForm";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "شركة إم جي | الصفحة الرئيسية",
-  description: "شركة ام جي للمقاولات العامة واعمال البحر",
+  title: "Home | Partify",
+  description:
+    "At Partify, we're passionate about cars and committed to quality. Explore our selection of genuine auto parts, high-performance batteries, premium engine oils, and top-tier car care products. Trusted by car owners, workshops, and resellers across Egypt.",
 };
+
 export default function Home() {
   return (
     <main>

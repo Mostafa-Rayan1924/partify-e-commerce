@@ -1,9 +1,11 @@
 import ContactForm from "@/_components/sharable/ContactForm";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "شركة إم جي | اتصل بنا",
-  description: "شركة ام جي للمقاولات العامة واعمال البحر",
+  title: "Contact Us | Partify",
+  description:
+    "Have questions or need support? Reach out to the Partify team through our contact form or using the provided contact information. We're here to assist you with all your automotive needs.",
 };
+
 const page = () => {
   return (
     <section className="mt-[140px] mb-10">
