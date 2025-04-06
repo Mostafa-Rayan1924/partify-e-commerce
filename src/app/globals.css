@@ -94,12 +94,12 @@
   border-radius: 4px;
 }
 .image-gallery-thumbnail:hover {
-  border: 3px solid gold !important;
+  border: 2px solid 221.2 83.2% 53.3% !important;
   border-radius: 4px;
 }
 .image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus {
-  border: 3px solid gold !important;
+  border: 2px solid 221.2 83.2% 53.3% !important;
   border-radius: 4px;
 }
 .custom-prev,
@@ -118,7 +118,7 @@
 }
 .custom-prev:hover,
 .custom-next:hover {
-  color: gold;
+  color: 221.2 83.2% 53.3%;
 }
 /* تحديد موقع الأسهم */
 .custom-prev {

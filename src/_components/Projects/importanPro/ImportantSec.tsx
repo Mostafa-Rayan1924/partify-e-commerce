@@ -21,25 +21,28 @@ const ImportantSec = () => {
         x={"right-0"}
         color={"text-primary hidden md:block"}
       />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2  md:gap-8">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2  md:gap-8">
         <div>
           <div className="max-w-lg md:max-w-none space-y-4">
-            <h2 className="text-2xl font-semibold  sm:text-3xl lg:text-4xl">
-              اخر مشاريع <span className="text-primary">شركتنا</span>
+            <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
+              Our Products at <span className="text-primary">Partify</span>
             </h2>
-            <p className=" leading-[2] text-muted-foreground">
-              مشروع ميدان شامبليون واحد من اقوي المشاريع الاخيره التي تمت في
-              مدينه الاسماعيليه بالفتره الاخيره تعاونا مع هيئة قناه السويس...
-              المشروع شمل العديد من التطورات المبهره التي قامت بها الشركه علي
-              الميدان...حيث قامت الشركه بتوسيعات واضافات ادت الي تحويل المكان من
-              حديقه عامه الي حديقه اشبه بالحدائق السياحية واصبحت كمجمع للكافيهات
-              والمطاعم.
+            <p className="leading-[2] text-muted-foreground">
+              At Partify, we offer a wide range of high-quality automotive
+              products designed to enhance both the performance and aesthetic of
+              your vehicle. From exterior accessories to interior upgrades, our
+              products are crafted with precision and durability in mind.
+              Whether you're looking to improve your car's functionality, style,
+              or comfort, Partify provides innovative solutions that cater to
+              every need of car enthusiasts. Explore our extensive collection to
+              discover the perfect products that suit your automotive
+              preferences.
             </p>
             <div className="flex items-center justify-center lg:justify-start gap-2">
               <Link href={"/about"}>
                 <Button
                   className={cn(buttonVariants({ size: "lg" }), "text-white")}>
-                  قراءة المزيد
+                  Read More
                 </Button>
               </Link>
               <Link href={"/contact"}>
@@ -47,7 +50,7 @@ const ImportantSec = () => {
                   className={cn(
                     buttonVariants({ size: "lg", variant: "outline" })
                   )}>
-                  اتصل بنا
+                  Contact Us
                 </Button>
               </Link>
             </div>
@@ -56,8 +59,8 @@ const ImportantSec = () => {
 
         <div className="h-[350px] size-full relative">
           <Image
-            src="https://res.cloudinary.com/dlaeaq6is/image/upload/v1740592527/1_etr4uo.jpg"
-            className="rounded "
+            src="https://res.cloudinary.com/dlaeaq6is/image/upload/v1743975459/1910.i101.035_car_parts_spares_isometric_set_gqwn6f.jpg"
+            className="rounded object-cover "
             alt="image"
             fill
           />
