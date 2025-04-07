@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/_components/Navigation/ThemeProvider";
 import Footer from "@/_components/sharable/Footer";
 import ReduxProvider from "@/store/ReduxProvider";
 import { Toaster } from "react-hot-toast";
+import Ai from "@/_components/sharable/Ai";
 
 export const metadata: Metadata = {
   title: "MG Company",
@@ -43,6 +44,7 @@ export default function RootLayout({
             {children}
             <Footer />
             <Toaster position="top-center" reverseOrder={false} />
+            <Ai />
           </ThemeProvider>
         </ReduxProvider>
       </body>
