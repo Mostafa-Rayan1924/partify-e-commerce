@@ -12,18 +12,22 @@ import { AppDispatch, RootState } from "@/store/store";
 import { loginFunc } from "@/store/AuthSlice/loginSlice";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 const LoginForm = () => {
   let { user, loading } = useSelector((state: RootState) => state.loginSlice);
   let router = useRouter();
   let dispatch = useDispatch<AppDispatch>();
+
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
-      password: "test1234",
+      password: "",
     },
     mode: "onChange",
   });
+
   async function onSubmit(values: z.infer<typeof loginSchema>) {
     let params = {
       email: values.email,
@@ -34,39 +38,47 @@ const LoginForm = () => {
       form.reset();
     }
   }
+
   if (user.token) {
     router.push("/");
   }
+
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" w-full container ">
-        <MainTitle title="تسجيل الدخول" />
-        <div className="max-w-[600px] border-border border-dotted border-2 p-4 rounded-lg space-y-4 mx-auto">
+        className=" container max-w-[600px] ">
+        <MainTitle title="Welcome Back" />
+
+        <div className=" border-border border-dotted border-2 p-4 mb-2 rounded-lg space-y-4 mx-auto">
           <InputRerender
             form={form}
             name="email"
-            label="الايميل"
+            label="Email"
             type="email"
-            placeholder="ادخل ايميلك"
+            placeholder="Enter your email"
           />
           <InputRerender
             form={form}
             name="password"
-            label="كلمة السر"
+            label="Password"
             type="text"
-            placeholder="ادخل كلمة السر"
+            placeholder="Enter your password"
           />
+
           <Button
             className={`w-full ${
               loading && "pointer-events-none bg-primary/70"
             }`}
             disabled={loading}
             type="submit">
-            {loading ? <Loader2 className="animate-spin " /> : "تسجيل الدخول"}
+            {loading ? <Loader2 className="animate-spin " /> : "Login"}
           </Button>
         </div>
+        <Link href="/register">
+          you don't have an account ?{" "}
+          <span className="text-primary">sign up</span>
+        </Link>
       </form>
     </Form>
   );
