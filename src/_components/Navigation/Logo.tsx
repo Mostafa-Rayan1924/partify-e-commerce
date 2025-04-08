@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className="size-[100px]  relative">
+    <div className="size-[80px] sm:size-[100px]  relative">
       <Link href={`/`} className="size-full">
         <Image
           src={

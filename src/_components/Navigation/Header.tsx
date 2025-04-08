@@ -1,10 +1,11 @@
 import Logo from "./Logo";
-import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import Sidebar from "./Sidebar";
 import { links } from "@/constants/NavLinks";
 import LinkLi from "./LinkLi";
 import LoggedUserBtns from "./LoggedUserBtns";
+import LoggedUserData from "./LoggedUserData";
+import Cart from "../Cart/Cart";
 const Header = () => {
   return (
     <header className="bg-background/50   shadow-md shadow-primary/20 fixed top-0 left-0 w-full z-50 backdrop-blur-md">
@@ -17,10 +18,9 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center gap-4">
-          <div className="md:flex hidden">
-            <LoggedUserBtns />
-          </div>
+        <div className="flex relative items-center gap-4">
+          <LoggedUserData />
+          <Cart />
           <ModeToggle />
           <div className="flex md:hidden">
             <Sidebar />

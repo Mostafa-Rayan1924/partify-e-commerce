@@ -28,19 +28,18 @@ const LoggedUserBtns = () => {
       {user.token ? (
         <AlertDialog>
           <AlertDialogTrigger>
-            <Button className="w-full bg-red-500 px-6 lg:px-8 hover:bg-red-600 text-white rounded-lg py-1">
+            <Button className="w-full bg-red-500 px-6 lg:px-8 hover:bg-red-600 text-white rounded-md capitalize py-1">
               logout
             </Button>
           </AlertDialogTrigger>
-          <AlertDialogContent className="text-right">
+          <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle className="text-right">
+              <AlertDialogTitle>
                 are you sure you want to logout?
               </AlertDialogTitle>
             </AlertDialogHeader>
             <AlertDialogFooter className="flex flex-row-reverse">
               {" "}
-              {/* ✅ عكس الأزرار */}
               <AlertDialogCancel>cancel</AlertDialogCancel>
               <AlertDialogAction onClick={handleLogout}>
                 confirm

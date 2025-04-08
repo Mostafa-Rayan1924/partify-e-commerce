@@ -30,7 +30,7 @@ const initialState: {
   loading: false,
   error: "",
 };
-export const loginFunc: AsyncThunk<
+export const SignupFunc: AsyncThunk<
   AxiosResponse<any, any>,
   {
     email: string;
@@ -38,11 +38,11 @@ export const loginFunc: AsyncThunk<
   },
   AsyncThunkConfig
 > = createAsyncThunk(
-  "login/loginFunc",
+  "Signup/SignupFunc",
   async (params: { email: string; password: string }) => {
     try {
       let data = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}api/partify/auth/login`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}api/partify/auth/signup`,
         params
       );
       return data;
@@ -52,48 +52,32 @@ export const loginFunc: AsyncThunk<
     }
   }
 );
-export const loginSlice = createSlice({
-  name: "login",
+export const SignSlice = createSlice({
+  name: "Signup",
   initialState,
-  reducers: {
-    logout: (state) => {
-      state.user = {
-        token: "",
-        userData: {
-          _id: "",
-          username: "",
-          email: "",
-          photo: "",
-          location: "",
-        },
-      };
-      typeof window !== "undefined" && localStorage.removeItem("LoggedUser");
-      window.location.href = "/";
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(loginFunc.fulfilled, (state, action) => {
-      let userLoggedInData = {
+    builder.addCase(SignupFunc.fulfilled, (state, action) => {
+      let userSignupData = {
         token: action.payload.data.token,
         userData: action.payload.data.data.result,
       };
-      state.user = userLoggedInData;
+      state.user = userSignupData;
       state.loading = false;
-      toast.success("logged in successfully");
+      toast.success("Sign up successfully");
       typeof window !== "undefined" &&
-        localStorage.setItem("LoggedUser", JSON.stringify(userLoggedInData));
-      // setTimeout(() => {
-      //   window.location.href = "/";
-      // }, 1500);
+        localStorage.setItem("LoggedUser", JSON.stringify(userSignupData));
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1500);
     });
-    builder.addCase(loginFunc.pending, (state) => {
+    builder.addCase(SignupFunc.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(loginFunc.rejected, (state, action) => {
+    builder.addCase(SignupFunc.rejected, (state, action) => {
       state.error = toast.error(action.error.message || "error occured");
       state.loading = false;
     });
   },
 });
-export const { logout } = loginSlice.actions;
-export default loginSlice.reducer;
+export default SignSlice.reducer;

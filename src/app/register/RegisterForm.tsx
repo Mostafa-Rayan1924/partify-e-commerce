@@ -15,7 +15,20 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store/store";
+import { useRouter } from "next/navigation";
+import { SignupFunc } from "@/store/AuthSlice/SignupSlice";
+import { Loader2 } from "lucide-react";
 const RegisterForm = () => {
+  let { user, loading } = useSelector((state: RootState) => state.SignSlice);
+  console.log(user);
+  let router = useRouter();
+  if (user.token) {
+    router.push("/");
+  }
+  let dispatch = useDispatch<AppDispatch>();
+
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
     defaultValues: {
@@ -24,8 +37,19 @@ const RegisterForm = () => {
       password: "",
     },
   });
-  function onSubmit(values: z.infer<typeof RegisterSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof RegisterSchema>) {
+    let params = {
+      email: values.email,
+      password: values.password,
+      username: values.username,
+      phone: values.phone,
+      location: values.location,
+    };
+    let res: any = await dispatch(SignupFunc(params)).unwrap();
+    console.log(res);
+    if (res.status == 200) {
+      form.reset();
+    }
   }
 
   return (
@@ -112,8 +136,13 @@ const RegisterForm = () => {
                 )}
               />
             </div>
-            <Button className="w-full" type="submit">
-              Submit
+            <Button
+              className={`w-full ${
+                loading && "pointer-events-none bg-primary/70"
+              }`}
+              disabled={loading}
+              type="submit">
+              {loading ? <Loader2 className="animate-spin " /> : "Signup"}
             </Button>
           </form>
         </Form>

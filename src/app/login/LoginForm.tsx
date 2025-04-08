@@ -17,6 +17,9 @@ import Link from "next/link";
 const LoginForm = () => {
   let { user, loading } = useSelector((state: RootState) => state.loginSlice);
   let router = useRouter();
+  if (user.token) {
+    router.push("/");
+  }
   let dispatch = useDispatch<AppDispatch>();
 
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -37,10 +40,6 @@ const LoginForm = () => {
     if (res.success) {
       form.reset();
     }
-  }
-
-  if (user.token) {
-    router.push("/");
   }
 
   return (

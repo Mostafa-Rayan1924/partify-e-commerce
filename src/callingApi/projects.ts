@@ -56,7 +56,7 @@ export async function getProjectsByCat(categoryId?: string) {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}${
         categoryId
-          ? `/api/partify/subCategory/${categoryId}/subcategory/getall`
+          ? `/api/partify/category/${categoryId}/subcategory/getall`
           : "/api/partify/subCategory/getall"
       }`
     );
