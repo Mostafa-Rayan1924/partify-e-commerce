@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description: "Partify - Your Trusted Source for Genuine Auto Parts",
   icons: [
     {
-      url: "https://res.cloudinary.com/dlaeaq6is/image/upload/v1743844729/logo-removebg-preview_scqxqj.png",
-      href: "https://res.cloudinary.com/dlaeaq6is/image/upload/v1743844729/logo-removebg-preview_scqxqj.png",
+      url: "https://res.cloudinary.com/dlaeaq6is/image/upload/v1743844844/logodark-removebg-preview_d7q6py.png",
+      href: "https://res.cloudinary.com/dlaeaq6is/image/upload/v1743844844/logodark-removebg-preview_d7q6py.png",
       sizes: "192x192",
       type: "image/png",
       rel: "icon",
