@@ -9,8 +9,8 @@ import { Toaster } from "react-hot-toast";
 import Ai from "@/_components/sharable/Ai";
 
 export const metadata: Metadata = {
-  title: "MG Company",
-  description: "MG Company For Construction And Marine Works",
+  title: "Partify",
+  description: "Partify - Your Trusted Source for Genuine Auto Parts",
   icons: [
     {
       url: "https://res.cloudinary.com/dlaeaq6is/image/upload/v1743844729/logo-removebg-preview_scqxqj.png",
