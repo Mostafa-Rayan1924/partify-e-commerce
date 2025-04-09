@@ -14,7 +14,6 @@ const SwiperCard = ({ images }: { images: ReactImageGalleryItem[] }) => {
       <ArrowRightCircleIcon size={30} />
     </button>
   );
-  console.log(images);
   // استبدال أيقونة السابق
   const renderLeftNav = (
     onClick: React.MouseEventHandler<HTMLElement>,

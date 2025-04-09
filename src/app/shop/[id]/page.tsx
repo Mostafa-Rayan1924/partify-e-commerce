@@ -3,6 +3,7 @@ import { Captions, CircleDollarSign, FileDigit, Truck } from "lucide-react";
 import SwiperCard from "./SwiperCard";
 import MainTitle from "@/_components/sharable/MainTitle";
 import { Button } from "@/components/ui/button";
+import AddToCart from "./AddToCart";
 export async function generateMetadata({
   params,
 }: {
@@ -23,8 +24,6 @@ export async function generateMetadata({
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   let data = await getProjectById(id);
-  console.log("first");
-  console.log(data);
   return (
     <section className="mt-[140px] mb-20">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -60,7 +59,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </h2>
           </div>
           <div>
-            <Button className="w-full">Add to Cart</Button>
+            <AddToCart data={data} />
           </div>
         </div>
       </div>
