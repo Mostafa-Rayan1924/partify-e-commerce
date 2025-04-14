@@ -28,7 +28,7 @@ const HeroCarousel = ({ data }: { data: any }) => {
               alt={item?.name}
               width={500}
               height={500}
-              className="rounded-lg  h-full object-fill  "
+              className="rounded-lg  size-full object-fill  "
             />
           </SwiperSlide>
         ))}

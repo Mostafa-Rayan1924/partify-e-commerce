@@ -21,7 +21,7 @@ const Hero = async () => {
         x={"left-10"}
         color={"text-blue-500 hidden md:block"}
       />
-      <div className="container grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <div className="container grid grid-cols-1 xl:grid-cols-5 gap-6">
         <HeroInfo />
         <HeroCarousel data={data} />
       </div>
