@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -23,19 +23,25 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem
+          className={` ${theme === "light" ? "bg-accent my-[2px] " : ""}`}
+          onClick={() => setTheme("light")}>
           <div className="flex items-center gap-1 capitalize cursor-pointer">
             <SunDim className="size-4 mt-[2px]" />
             light mode
           </div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem
+          className={` ${theme === "dark" ? "bg-accent my-[2px] " : ""}`}
+          onClick={() => setTheme("dark")}>
           <div className="flex items-center gap-1 capitalize cursor-pointer">
             <MoonIcon className="size-4 mt-[2px]" />
             dark mode
           </div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem
+          className={` ${theme === "system" ? "bg-accent my-[2px] " : ""}`}
+          onClick={() => setTheme("system")}>
           <div className="flex items-center gap-1 capitalize cursor-pointer">
             <Computer className="size-4 mt-[2px]" />
             system
