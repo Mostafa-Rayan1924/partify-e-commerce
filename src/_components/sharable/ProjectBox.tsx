@@ -1,12 +1,12 @@
-import AddToCart from "@/app/shop/[id]/AddToCart";
 import { Project } from "@/types/type";
 import { Captions, CircleDollarSign } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCartBox from "../Cart/AddToCartBox";
 
 const ProjectBox = ({ item }: { item: Project }) => {
   return (
-    <>
+    <div className="relative ">
       <Link className="space-y-3" href={`/shop/${item._id}`} key={item._id}>
         <div className="w-full  h-[250px] relative">
           <Image
@@ -27,9 +27,9 @@ const ProjectBox = ({ item }: { item: Project }) => {
       </Link>
 
       <div className="mt-3">
-        <AddToCart data={item} />
+        <AddToCartBox data={item} />
       </div>
-    </>
+    </div>
   );
 };
 
