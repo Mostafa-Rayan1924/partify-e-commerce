@@ -49,7 +49,7 @@ const LoggedUserBtns = () => {
         </AlertDialog>
       ) : (
         <Link
-          className="group w-full   relative  overflow-hidden border
+          className="group w-full hidden md:flex  relative  overflow-hidden border
   border-primary px-6 lg:px-8 rounded py-1 focus:ring-3 focus:outline-hidden"
           href={`/login`}>
           <span className="absolute inset-x-0 bottom-0 h-[1px] bg-primary transition-all group-hover:h-full"></span>
