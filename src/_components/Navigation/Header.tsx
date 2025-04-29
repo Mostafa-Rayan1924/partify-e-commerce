@@ -19,7 +19,9 @@ const Header = () => {
           </ul>
         </nav>
         <div className="flex relative items-center gap-4">
-          <LoggedUserData />
+          <div className="hidden md:flex">
+            <LoggedUserData />
+          </div>
           <Cart />
           <ModeToggle />
           <div className="flex md:hidden">
