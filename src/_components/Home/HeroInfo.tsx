@@ -8,7 +8,7 @@ const HeroInfo = () => {
     <div className="col-span-3 relative mt-[30px] lg:mt-[80px]">
       <div className=" space-y-4 xl:space-y-6">
         <h2 className="text-2xl  sm:text-3xl text-center lg:text-start lg:text-5xl font-bold">
-          Welcome to <span className="text-primary capitalize">partify</span>{" "}
+          Welcome to <span className="text-primary capitalize">partify </span>
           company
         </h2>
         <p className="text-muted-foreground leading-7 text-center sm:text-start lg:max-w-[70%]">

@@ -7,6 +7,7 @@ import Footer from "@/_components/sharable/Footer";
 import ReduxProvider from "@/store/ReduxProvider";
 import { Toaster } from "react-hot-toast";
 import Ai from "@/_components/sharable/Ai";
+import AiModel from "@/_components/sharable/AiModel";
 
 export const metadata: Metadata = {
   title: "Partify",
@@ -45,6 +46,7 @@ export default function RootLayout({
             <Footer />
             <Toaster position="top-center" reverseOrder={false} />
             <Ai />
+            <AiModel />
           </ThemeProvider>
         </ReduxProvider>
       </body>

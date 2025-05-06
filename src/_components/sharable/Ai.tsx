@@ -42,7 +42,7 @@ const Ai = () => {
   };
 
   return (
-    <div className="fixed bottom-10 right-10 z-50">
+    <div className="fixed bottom-24 right-10 z-50">
       <Dialog>
         <DialogTrigger asChild>
           <div className="grid bg-background place-items-center hover:border-primary duration-200 border border-border p-2 size-12 cursor-pointer rounded-lg">
@@ -89,6 +89,7 @@ const Ai = () => {
                 {loading && <Loader />}
 
                 <textarea
+                  disabled={true}
                   placeholder="Welcome ... ask anything"
                   className="w-full h-60  leading-relaxed bg-background  resize-none p-2 text-sm overflow-y-auto"
                   value={loading ? "loading..." : res}
