@@ -30,7 +30,7 @@ const AiModel = () => {
 
     try {
       const response = await axios.post(
-        "https://42e2a390-24e4-4aee-8b9d-6241faae8af9-00-5ief370lapz5.spock.replit.dev/predict",
+        "https://blind-ai-api.onrender.com/predict",
         {
           brand: msg, // هذه هي البيانات المطلوبة
         },
